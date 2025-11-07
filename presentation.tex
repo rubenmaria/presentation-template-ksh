@@ -1,0 +1,148 @@
+\documentclass[aspectratio=1610,12pt]{beamer}
+
+\input{beamer-preamble.tex}
+
+\usepackage{footmisc}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{qrcode}
+\usepackage{svg}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\thefootnote}{[\arabic{footnote}]}
+
+\author{[Autor]}
+\title{[Titel]}
+\subtitle{[PräsentationsTyp / Fach]}
+\institute{Katholische Stiftungs Hochschule München}
+\date{ \today }
+
+\newcommand{\cn}[2]{\textcolor{#1}{#2}}%color next (element)
+
+\definecolor{c1}{RGB}{189, 57, 57}
+\definecolor{c2}{RGB}{57, 155, 163}
+\definecolor{c3}{RGB}{16, 14, 77}
+\definecolor{SkyBlue}{RGB}{135, 206, 235}
+\definecolor{CrimsonRed}{RGB}{220, 20, 60}
+\definecolor{ForestGreen}{RGB}{34, 139, 34}
+\definecolor{Goldenrod}{RGB}{218, 165, 32}
+\definecolor{DeepPurple}{RGB}{75, 0, 130}
+\definecolor{Coral}{RGB}{255, 127, 80}
+\definecolor{Teal}{RGB}{0, 128, 128}
+\definecolor{Lavender}{RGB}{230, 230, 250}
+\definecolor{Amber}{RGB}{255, 191, 0}
+\definecolor{SlateGray}{RGB}{112, 128, 144}
+
+\definecolor{ContrastRed}{RGB}{230, 25, 75}   % Red
+\definecolor{ContrastGreen}{RGB}{60, 180, 75}   % Green
+\definecolor{ContrastBlue}{RGB}{0, 130, 200}   % Blue
+\definecolor{ContrastOrange}{RGB}{245, 130, 48}  % Orange
+\definecolor{ContrastPurple}{RGB}{145, 30, 180}  % Purple
+\definecolor{ContrastCyan}{RGB}{70, 240, 240}  % Cyan
+\definecolor{ContrastMagenta}{RGB}{240, 50, 230}  % Magenta
+\definecolor{ContrastLime}{RGB}{210, 245, 60}  % Lime
+\definecolor{ContrastPink}{RGB}{250, 190, 190} % Pink
+
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+
+\newcommand{\codetosource}[2]{%
+  \begin{center}
+    \qrcode[height=2cm]{#1}\\
+    \vspace{.1cm}
+    {#2}
+  \end{center}
+}
+\DeclarePairedDelimiter\catmap{\llbracket}{\rrbracket}
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\vfill}
+  {\vskip\itemsep\vspace{1cm}}
+  {}
+  {}
+\makeatother
+
+\begin{document}
+\begin{frame}[plain, noframenumbering]{}
+	% this is shown in the beginning of the presentation to keep it exciting
+\end{frame}
+
+\begin{frame}
+	\vspace{0.4cm}
+	\centering
+	\includegraphics[scale=0.4]{ksh-logo.png}
+	\titlepage
+\end{frame}
+
+\begin{frame}[t]{Outline}
+	\begin{columns}[c]
+		\begin{column}{0.46\textwidth}
+			\tableofcontents[hideallsubsections]
+		\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{center}
+				[Include interesting picture]
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+\section{Einleitung}
+
+\begin{frame}{Einleitung}
+	\begin{center}
+		Das ist eine Eileitung
+	\end{center}
+\end{frame}
+
+
+\begin{frame}{Einleitung 2}
+	\begin{center}
+		Das ist eine Eileitung 2
+	\end{center}
+\end{frame}
+
+\section{Hauptteil 1}
+
+\begin{frame}{Hauptteil 1}
+	\begin{center}
+		Das ist ein Hauptteil
+	\end{center}
+\end{frame}
+
+
+\section{Hauptteil 2}
+
+\begin{frame}{Hauptteil 2}
+	\begin{center}
+		Das ist ein Hauptteil
+	\end{center}
+\end{frame}
+
+\section{Hauptteil 3}
+
+\begin{frame}{Hauptteil 3}
+	\begin{center}
+		Das ist ein Hauptteil
+	\end{center}
+\end{frame}
+
+\section{Fazit}
+
+\begin{frame}{Fazit}
+	\begin{itemize}
+		\item Fazit
+	\end{itemize}
+\end{frame}
+
+
+\appendix
+
+\section{Anhang für Fragen}
+
+\begin{frame}
+	\begin{center}
+		Ich war auf eure Fragen vorbereitet
+	\end{center}
+\end{frame}
+
+\end{document}
